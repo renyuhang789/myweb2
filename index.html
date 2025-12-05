@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>华中科技大学 sc2505班</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      /* 盒子模型，初始化 */
+      
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      /* 初始化，两个color引用 */
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      /* 居中 */
+      padding: 0 20px;
+      /* .是类，#是id */
+    }
+
+    
+    .time1 {
+      font-size: 50px;
+      color: #155d6e;
+      margin: 20px;
+      display: inline-block;
+    }
+
+    /* 导航栏 */
+    header {
+      background-color: #1a56db;
+      color: white;
+      padding: 15px 0;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+     a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      padding: 5px 0;
+    }
+    nav a:hover {
+      border-bottom: 2px solid white;
+    }
+
+    /* 主标题区 */
+    .hero {
+      padding: 60px 0;
+      text-align: center;
+      background-color: #f0f5ff;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #1a56db;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* 班级简介 */
+    .intro {
+      padding: 40px 0;
+      background-color: white;
+    }
+    .intro h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1a56db;
+    }
+    .intro-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* 图片展示区 */
+    .gallery {
+      padding: 40px 0;
+    }
+   
+    .img-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .img-item {
+      background-color: #e9ecef;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .img-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .img-placeholder {
+      color: #666;
+      text-align: center;
+    }
+
+    /* 链接区域 */
+    .links {
+      padding: 40px 0;
+      background-color: white;
+      text-align: center;
+    }
+    .links h2 {
+      margin-bottom: 30px;
+      color: #1a56db;
+    }
+    .link-btn {
+      display: inline-block;
+      margin: 0 10px 15px;
+      padding: 10px 20px;
+      background-color: #1a56db;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .link-btn:hover {
+      background-color: #0d47a1;
+    }
+
+    /* 页脚 */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">sc2505班</div>
+      <nav>
+        <a href="#">首页</a>
+        <a href="/myweb2/h1.html">班级成员</a>
+        <a href="/myweb2/h2.html">班级活动</a>
+        <a href="/myweb2/h3.html">联合班会记录</a>
+        <a href="/myweb2/h3.html">班会记录</a>
+       
+      </nav>
+    </div>
+  </header>
+
+  <!-- 主标题区 - 标题后添加实时时间 -->
+  <section class="hero">
+    <div class="container">
+      <h1>华中科技大学 sc2505班 官方网站</h1><br>
+      <!-- 实时时间显示，使用time1样式类 -->
+      <span class="time1" id="currentTime"></span>
+      <p>团结奋进，追求卓越——我们的班级，我们的家</p>
+    </div>
+  </section>
+
+  <!-- 班级简介 -->
+  <section class="intro">
+    <div class="container">
+      <h2>班级简介</h2>
+      <div class="intro-content">
+        <p>2505班，是一个由34名同学组成的团结友爱的集体。我们来自五湖四海，怀揣梦想与期待，在华中科技大学共同学习、共同成长。</p>
+        <p>班级秉承"明德厚学，求是创新"的校训，在学习上勤奋刻苦，在活动中积极参与，努力成为一个有活力、有凝聚力的优秀班级。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图片展示区 -->
+  <section class="gallery">
+    <div class="container">
+      <h2>班级风采</h2>
+      <div class="img-grid">
+        <!-- 图片1 -->
+        <div class="img-item">
+          <img src="/myweb2/img/i1.png" alt="请插入">
+          <div class="img-placeholder"></div>
+        </div>
+        <!-- 图片2 -->
+        <div class="img-item">
+          <img src="/myweb2/img/i2.png" alt="请插入">
+         
+          <div class="img-placeholder"></div>
+        </div>
+        <!-- 图片3 -->
+        <div class="img-item">
+          <img src="/myweb2/img/i3.png" alt="请插入">
+          <div class="img-placeholder"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <p>©  sc2505班 版权所有</p>
+    </div>
+  </footer>
+
+  <script>
+    const timeElement = document.getElementById("currentTime");
+
+  // padstart(2,'0')=c语言的%2d,但是得用String强制转换成串
+    function updateTime() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      
+
+      
+      timeElement.textContent = `${year}-${month}-${day} ${hours}:${minutes}:${seconds} `;
+    }
+
+    
+    updateTime();
+    
+    setInterval(updateTime, 1000);
+
+    
+  </script>
+</body>
+
+</html>
+
+
+
